@@ -1,3 +1,4 @@
+require("dotenv").config()
 const express = require('express')
 const app = express()
 const mongoose = require("mongoose")
@@ -8,7 +9,7 @@ app.use(express.json())
 app.use(cors())
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/", {
+mongoose.connect(process.env.MONGO_URI, {
 
 }).then(() => {
     console.log("mongoose connected successfully");
@@ -71,12 +72,12 @@ app.get("/data", async (req, res) => {
 
 
 
-app.put("/edit/:id", async(req, res) => {
+app.put("/edit/:id", async (req, res) => {
     const id = req.params.id
-    const { Title, Detail,Status } = req.body
+    const { Title, Detail, Status } = req.body
 
     try {
-        await user.updateOne({_id:id},{$set:{Title:Title,Detail:Detail,Status:Status}})
+        await user.updateOne({ _id: id }, { $set: { Title: Title, Detail: Detail, Status: Status } })
         res.status(404).json({
             message: "task updated successfully"
         })

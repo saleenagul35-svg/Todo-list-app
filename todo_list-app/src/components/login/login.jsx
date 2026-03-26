@@ -36,16 +36,17 @@ const Login = () => {
             alert("Incorrect Username or Password")
         }
         setLogIn({
-        Email: "",
-        Password: ""})
+            Email: "",
+            Password: ""
+        })
     }
 
     const LogInHome = (event) => {
         event.preventDefault()
 
-        matchingFunction();
+        // matchingFunction();
 
-
+        navigate("/home")
 
 
     }

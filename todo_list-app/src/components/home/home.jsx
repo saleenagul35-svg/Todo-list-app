@@ -57,11 +57,7 @@ const Home = ({ data, tasks, setTasks, setEditTask }) => {
 
         }
 
-        // setTasks(prev =>
-        //     prev.filter(a =>
-        //         a.id !== id
-        //     )
-        // )
+ 
 
     }
     const CheckTask = async (id) => {
@@ -84,14 +80,6 @@ const Home = ({ data, tasks, setTasks, setEditTask }) => {
         }
 
         
-
-        // setTasks(prev =>
-        //     prev.map(t =>
-        //         t.id === id
-        //             ? { ...t, Status: !t.Status }
-        //             : t
-        //     )
-        // )
     }
 
 useEffect(()=>{
