@@ -11,7 +11,7 @@ const CompletePage = ({ tasks, setTasks }) => {
     const fun = async () => {
         try {
 
-            const response = await fetch("http://localhost:5000/data", {
+            const response = await fetch("https://todo-list-app-v7wf.vercel.app/data", {
                 method: "GET",
 
             })

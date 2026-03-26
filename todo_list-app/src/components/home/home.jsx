@@ -27,7 +27,7 @@ const Home = ({ data, tasks, setTasks, setEditTask }) => {
     const DeleteTask = async (id) => {
 
         try {
-            let response = await fetch(`http://localhost:5000/delete/${id}`, {
+            let response = await fetch(`https://todo-list-app-v7wf.vercel.app/delete/${id}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"
@@ -43,7 +43,7 @@ const Home = ({ data, tasks, setTasks, setEditTask }) => {
 
         try {
 
-            const response = await fetch("http://localhost:5000/data", {
+            const response = await fetch("https://todo-list-app-v7wf.vercel.app/data", {
                 method: "GET",
 
             })
@@ -64,7 +64,7 @@ const Home = ({ data, tasks, setTasks, setEditTask }) => {
 
 
         try {
-            let response = await fetch(`http://localhost:5000/check/${id}`, {
+            let response = await fetch(`https://todo-list-app-v7wf.vercel.app/check/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
@@ -86,7 +86,7 @@ useEffect(()=>{
         const getFun = async () => {
         try {
 
-            const response = await fetch("http://localhost:5000/data", {
+            const response = await fetch("https://todo-list-app-v7wf.vercel.app/data", {
                 method: "GET",
 
             })

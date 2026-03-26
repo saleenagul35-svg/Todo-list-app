@@ -31,7 +31,7 @@ const Addpage = ({ handleForm, setHandleForm, setTasks, tasks }) => {
      
         try{
             
-            const response = await fetch("http://localhost:5000/submit",{
+            const response = await fetch("https://todo-list-app-v7wf.vercel.app/submit",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"

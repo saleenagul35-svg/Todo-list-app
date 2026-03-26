@@ -14,7 +14,7 @@ const EditPage = ({ setEditTask, editTask, setTasks, tasks }) => {
 
         try {
 
-            await fetch(`http://localhost:5000/edit/${id}`, {
+            await fetch(`https://todo-list-app-v7wf.vercel.app/edit/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
@@ -29,7 +29,7 @@ const EditPage = ({ setEditTask, editTask, setTasks, tasks }) => {
         }
         try {
 
-            const response = await fetch("http://localhost:5000/data", {
+            const response = await fetch("https://todo-list-app-v7wf.vercel.app/data", {
                 method: "GET",
 
             })
