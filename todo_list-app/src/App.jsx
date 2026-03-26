@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-<Suspense fallback={<div>Loading...</div>}>
+<Suspense fallback={<div>loading...</div>}>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home data={handleForm} tasks={tasks} setTasks={setTasks} setEditTask={setEditTask} />} />
