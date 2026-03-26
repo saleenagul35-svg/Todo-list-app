@@ -1,4 +1,4 @@
-import { lazy, useState } from 'react'
+import { lazy, useState,Suspense } from 'react'
 import './App.css'
 import { Routes, Route } from "react-router-dom"
 import Login from './components/login/login'
