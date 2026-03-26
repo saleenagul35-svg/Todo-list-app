@@ -1,12 +1,12 @@
-import { useState } from 'react'
-
+import { lazy, useState } from 'react'
 import './App.css'
-import Home from './components/home/home'
 import { Routes, Route } from "react-router-dom"
-import Addpage from "./components/addpage/addpage"
-import CompletePage from "./components/completepage/completepage"
-import EditPage from './components/editpage/editpage'
 import Login from './components/login/login'
+
+const Addpage = lazy(()=>import("./components/addpage/addpage"))
+const Home = lazy(()=>import('./components/home/home'))
+const CompletePage = lazy(()=>import("./components/completepage/completepage"))
+const EditPage = lazy(()=>import('./components/editpage/editpage'))
 
 function App() {
   const [tasks, setTasks] = useState([]);

@@ -9,6 +9,8 @@ import trash from "../../assets/images/Trash.png"
 import pencil from "../../assets/images/Pencil.png"
 import check from "../../assets/images/Check.png"
 
+
+
 const Home = ({ data, tasks, setTasks, setEditTask }) => {
 
 
