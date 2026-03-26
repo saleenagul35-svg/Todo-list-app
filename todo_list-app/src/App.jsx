@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-
+<Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home data={handleForm} tasks={tasks} setTasks={setTasks} setEditTask={setEditTask} />} />
@@ -23,7 +23,7 @@ function App() {
         <Route path="/completedpage" element={<CompletePage tasks={tasks} setTasks={setTasks} />} />
         <Route path="/editpage" element={<EditPage editTask={editTask} setEditTask={setEditTask} tasks={tasks} setTasks={setTasks} />} />
       </Routes>
-  
+  </Suspense>
 
     </>
   )
