@@ -1,12 +1,12 @@
-import { lazy, useState,Suspense } from 'react'
-import './App.css'
-import { Routes, Route } from "react-router-dom"
-import Login from './components/login/login'
+import { useState } from 'react'
 
-const Addpage = lazy(()=>import("./components/addpage/addpage"))
-const Home = lazy(()=>import('./components/home/home'))
-const CompletePage = lazy(()=>import("./components/completepage/completepage"))
-const EditPage = lazy(()=>import('./components/editpage/editpage'))
+import './App.css'
+import Home from './components/home/home'
+import { Routes, Route } from "react-router-dom"
+import Addpage from "./components/addpage/addpage"
+import CompletePage from "./components/completepage/completepage"
+import EditPage from './components/editpage/editpage'
+import Login from './components/login/login'
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-<Suspense fallback={<div>loading...</div>}>
+
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home data={handleForm} tasks={tasks} setTasks={setTasks} setEditTask={setEditTask} />} />
@@ -23,7 +23,7 @@ function App() {
         <Route path="/completedpage" element={<CompletePage tasks={tasks} setTasks={setTasks} />} />
         <Route path="/editpage" element={<EditPage editTask={editTask} setEditTask={setEditTask} tasks={tasks} setTasks={setTasks} />} />
       </Routes>
-  </Suspense>
+  
 
     </>
   )
